@@ -4,7 +4,7 @@
 
 
 export FLASK_APP=api.py  # to tell flask where to run? set an environment variable in that terminal
-echo $FLASK_APP # to check if flask is associated with the file that runs the application
-
+echo $FLASK_APP # to check if flask is associated with the file that runs the application. <api.py> is the file with the flask app.
+# another alternative not used: FLASK_APP=api.py flask db init
 
 now we have to create a docker image.  and check ec2.
