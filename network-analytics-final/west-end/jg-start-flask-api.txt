@@ -1,0 +1,10 @@
+~/git_repos/final_project/front-end/app$ npm run start-flask-api; localhost:5000
+
+~/git_repos/final_project/front-end/app npm start app; localhost:3000
+
+
+export FLASK_APP=api.py  # to tell flask where to run? set an environment variable in that terminal
+echo $FLASK_APP # to check if flask is associated with the file that runs the application
+
+
+now we have to create a docker image.  and check ec2.
