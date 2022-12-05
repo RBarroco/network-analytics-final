@@ -95,7 +95,7 @@ def all_in_prediction():
     
     sample_dict = sample.to_dict()
     response = {"prediction": prediction, "id": id, "sample": sample_dict}
-    print("[+] results {}".format(response))
+    # print("[+] results {}".format(response))
 
     
     return response
