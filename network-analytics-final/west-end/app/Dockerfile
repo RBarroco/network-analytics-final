@@ -14,9 +14,11 @@ RUN apt-get -y update  && apt-get install -y \
 COPY requirements.txt .
 RUN pip install --no-cache-dir -U -r  requirements.txt
 
-COPY api/ ./api   
+COPY api/ .  
 
-# COPY api/ .  the program is doing cd api hope that the ./ copies the folder
+# COPY api/ /api/   the program is doing cd api hope that the ./ copies the folder but this is not working
+# added the env for flask
+
 
 FROM node:19
 ENV NODE_ENV=production
@@ -28,6 +30,9 @@ COPY package-lock.json .
 
 RUN npm install --production
 COPY src/ .   
+
+ENV FLASK_APP=api.py
+ENV FLASK_RUN_HOST=0.0.0.0
 
 
 CMD ["npm", "run", "start-flask-api"]
