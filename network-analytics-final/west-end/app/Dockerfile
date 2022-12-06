@@ -27,7 +27,10 @@ COPY package-lock.json .
 RUN npm install --production
 COPY src/ .   
 
-CMD ["npm", "run", "start-flask-api", "--host", "0.0.0.0", "--port", "5000"]
+
+CMD ["npm", "run", "start-flask-api"]
+
+# CMD ["npm", "run", "start-flask-api", "--host", "0.0.0.0", "--port", "5000"] did not work
 
 # ~/git_repos/final_project/front-end/app$ npm run start-flask-api; localhost:5000
 
