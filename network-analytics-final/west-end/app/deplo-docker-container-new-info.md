@@ -1,6 +1,11 @@
 ## file to keep track of the docker runs
 
 
+~/git_repos/final_project/front-end/app$ npm run start-flask-api; localhost:5000
+
+~/git_repos/final_project/front-end/app npm start app; localhost:3000
+
+
 
 
 in the docker-file example within network-analytics/network-analytics the file structure for the docker was: 

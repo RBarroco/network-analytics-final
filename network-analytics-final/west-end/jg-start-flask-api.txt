@@ -8,3 +8,17 @@ echo $FLASK_APP # to check if flask is associated with the file that runs the ap
 # another alternative not used: FLASK_APP=api.py flask db init
 
 now we have to create a docker image.  and check ec2.
+
+importing node.js
+
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
+. ~/.nvm/nvm.sh
+nvm install node
+nvm install 16.18.1
+
+npm install #to get the rest of the dependencies
+
+
+
+
+now we have to create a docker image.  and check ec2.
