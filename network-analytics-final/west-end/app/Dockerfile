@@ -14,7 +14,9 @@ RUN apt-get -y update  && apt-get install -y \
 COPY requirements.txt .
 RUN pip install --no-cache-dir -U -r  requirements.txt
 
-COPY api/ .   
+COPY api/ ./api   
+
+# COPY api/ .  the program is doing cd api hope that the ./ copies the folder
 
 FROM node:19
 ENV NODE_ENV=production
