@@ -14,14 +14,21 @@ RUN apt-get -y update  && apt-get install -y \
 COPY requirements.txt .
 RUN pip install --no-cache-dir -U -r  requirements.txt
 
-COPY api/ .   # for the python part
+COPY api/ .   
 
 FROM node:19
+ENV NODE_ENV=production
+
 WORKDIR .
 
 COPY package.json .
 COPY package-lock.json .
-COPY src/ .   # for the json part
 
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
+RUN npm install --production
+COPY src/ .   
 
+CMD ["npm", "run", "start-flask-api", "--host", "0.0.0.0", "--port", "5000"]
+
+# ~/git_repos/final_project/front-end/app$ npm run start-flask-api; localhost:5000
+
+# ~/git_repos/final_project/front-end/app npm start app; localhost:3000
