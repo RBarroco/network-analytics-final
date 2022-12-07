@@ -14,6 +14,8 @@ RUN apt-get -y update  && apt-get install -y \
 COPY requirements.txt .
 RUN pip install --no-cache-dir -U -r  requirements.txt
 
+RUN pip install --no-cache-dir -U flask
+
 COPY api/ .  
 
 # COPY api/ /api/   the program is doing cd api hope that the ./ copies the folder but this is not working
