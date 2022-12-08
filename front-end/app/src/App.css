@@ -1,10 +1,102 @@
 .App {
   text-align: center;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  min-height: 120vh;
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+h4 {
+  font-family: Arial, Helvetica, sans-serif;
+  
+}
+
+h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  padding-top: 15px;
+  padding-bottom: 2px;
+  
+}
+
+ button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+#prediction {
+  padding-left:100px;
+  text-align: left;
+  background-color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: Left;
+  padding-top:50px;
+  padding-bottom:50px;
+}
+
+#content-div {
+  background-color: #f0e6d8;
+  /* display:flex; */
+  display: table;
+  /* width: 100%; */
+  padding-left:100px;
+  padding-right:100px;
+  padding-top:50px;
+  /* flex-direction:row; */
+  min-height: 100vh;
+  
+
+ 
+}
+
+#comment-sample-data {
+  background-color: #f0e6d8;
+  text-align: left;
+  font-family: 'Spectral', serif;
+  font-size: 0.75em;
+  font-weight: 300;
+ /* letter-spacing: 0.2em; */
+  color: #3c3c3b;
+  display:table-cell
+ 
+}
+
+#comment-sample-data-v2 {
+  background-color: #f0e6d8;
+  text-align: left;
+  font-family: 'Spectral', serif;
+  font-size: 0.75em;
+  font-weight: 300;
+  letter-spacing: 0.025em;
+  color: #3c3c3b;
+  display:table-cell
+ 
+}
+
+
+
+#sample-data {  
+  background-color: #f0e6d8;
+  text-align: left;
+  font-family: 'Spectral', serif;
+  font-size: 0.75em;
+  font-weight: 300;
+  letter-spacing: 0.025em;
+  color: #3c3c3b;
+  display:table-cell
+ 
 }
 
 @media (prefers-reduced-motion: no-preference) {
